@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx24.loginwithdbsuper.Student_informationController">
+   <children>
+      <VBox onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="519.0" prefWidth="696.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="82.0" prefWidth="696.0" style="-fx-background-color: #000000; -fx-cursor: hand;" VBox.vgrow="ALWAYS">
+                            <children>
+                  <HBox alignment="CENTER" prefHeight="44.0" prefWidth="492.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="46.0" prefWidth="485.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #0010ee;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <JFXTextField fx:id="searchid" focusColor="#071aee" prefHeight="46.0" prefWidth="489.0" promptText="Search by id or name" style="-fx-background-radius: 10; -fx-text-fill: white; -fx-prompt-text-fill: white; -fx-border-color: none;" unFocusColor="#777ba8" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" onMouseClicked="#searchclick" size="20">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" right="20.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  
+                  <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#homebutton" style="-fx-background-color: gold;" text="Home" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </JFXButton>
+<!--                          for include title_bar page-->
+                                <fx:include source="Title_bar.fxml" />
+                          
+                            </children>
+            </HBox>
+            <HBox prefHeight="484.0" prefWidth="696.0" style="-fx-background-color: red;" VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="tableview" editable="true" prefHeight="448.0" prefWidth="686.0" style="-fx-background-color: pink;" HBox.hgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="t_id" prefWidth="104.0" text="ID" />
+                      <TableColumn fx:id="t_name" prefWidth="206.0" text="Name" />
+                        <TableColumn fx:id="t_email" prefWidth="180.0" text="Email" />
+                        <TableColumn fx:id="e_address" prefWidth="205.0" text="Address" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children></HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: green;" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#deletebutton" prefHeight="42.0" prefWidth="127.0" style="-fx-background-color: red; -fx-background-radius: 10;" text="Delete" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

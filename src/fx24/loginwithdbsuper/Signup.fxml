@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="696.0" style="-fx-background-color: red;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx24.loginwithdbsuper.SignupController">
+   <children>
+      <StackPane onMouseDragged="#dragged" onMousePressed="#pressed" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="497.0" prefWidth="118.0" style="-fx-background-color: #00cc99;" HBox.hgrow="ALWAYS" />
+                  <VBox alignment="TOP_RIGHT" style="-fx-background-color: #666633;" HBox.hgrow="ALWAYS">
+                      <children>
+<!--                          for include title_bar page-->
+                          <fx:include source="Title_bar.fxml" />
+                          
+                      </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="250.0" prefWidth="100.0" StackPane.alignment="CENTER">
+               <StackPane.margin>
+                  <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
+               </StackPane.margin>
+               <children>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: #ff0000; -fx-background-radius: 10;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Signup">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Text>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="310.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #2f02f7;">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXTextField fx:id="s_username" prefHeight="42.0" prefWidth="294.0" promptText="User name" style="-fx-text-fill: white; -fx-font-size: 15; -fx-prompt-text-fill: white;" unFocusColor="#2f02f7" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <FontAwesomeIconView fill="#f5f4f4" glyphName="USER" size="20" text="" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="310.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #2f02f7;">
+                           <children>
+                              <JFXTextField fx:id="s_email" prefHeight="42.0" prefWidth="294.0" promptText="Email" style="-fx-text-fill: white; -fx-font-size: 15; -fx-prompt-text-fill: white;" unFocusColor="#2f02f7" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <FontAwesomeIconView fill="#f5f5f5" glyphName="ENVELOPE_ALT" size="20" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="310.0" style="-fx-border-color: #2f02f7; -fx-border-width: 0 0 2 0;">
+                           <children>
+                              <JFXPasswordField fx:id="s_password" prefHeight="36.0" prefWidth="294.0" promptText="Password" style="-fx-text-fill: white; -fx-font-size: 15; -fx-prompt-text-fill: white;" unFocusColor="#3601f5" />
+                              <FontAwesomeIconView fill="#f8f8f8" glyphName="KEY" size="20" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="350.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" onMouseClicked="#signupbutton" prefHeight="28.0" prefWidth="221.0" style="-fx-background-color: green; -fx-background-radius: 100; -fx-font-weight: bold; -fx-font-size: 20;" text="Signup" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="#fffefe" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fill="#fffefe" onMouseClicked="#loginbutton" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: black; -fx-font-weight: bold;" text="Login">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+   </children>
+</AnchorPane>
